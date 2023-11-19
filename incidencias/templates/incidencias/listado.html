@@ -1,0 +1,7 @@
+{% if estaciones %}
+    <ul>
+        {% for estacion in estaciones %}
+            <li>{{ estacion.linea }} - {{ estacion }}  <a href="{% url 'incidencias:crear' estacion.id %}">+ nueva incidencia</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}
